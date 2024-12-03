@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Экология</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #00796b;
+        }
+        .menu {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #004d40;
+            border-radius: 5px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .menu button {
+            margin: 5px;
+            padding: 10px 15px;
+            background-color: #00796b;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            flex: 1 1 150px; /* A flexible layout for buttons */
+        }
+        .menu button:hover {
+            background-color: #004d40;
+        }
+        .content {
+            margin-top: 20px;
+            border: 1px solid #00796b;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #ffffff;
+            opacity: 1;
+            transition: opacity 0.5s ease;
+            display: none;
+        }
+        .content.active {
+            display: block;
+            opacity: 1;
+        }
+        .content.fade-out {
+            opacity: 0;
+        }
+        .content.fade-in {
+            opacity: 0;
+            display: block;
+            animation: fadeIn 0.5s forwards;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        /* Медиазапросы для улучшения отображения на мобильных устройствах */
+        @media (max-width: 600px) {
+            .menu button {
+                flex: 1 1 100%; /* Кнопки занимают всю ширину на мобильных устройствах */
+            }
+            body {
+                padding: 10px; /* Уменьшение отступов на мобильных устройствах */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Добро пожаловать на сайт об экологии!</h1>
+
+    <div class="menu">
+        <button onclick="showPage('home')">Домой</button>
+        <button onclick="showPage('biodiversity')">Биоразнообразие</button>
+        <button onclick="showPage('pollution')">Загрязнение</button>
+        <button onclick="showPage('climate')">Изменение климата</button>
+        <button onclick="showPage('conservation')">Защита окружающей среды</button>
+    </div>
+
+    <div id="home" class="content active">
+        <h2>Что такое экология?</h2>
+        <p>Экология – это наука, изучающая взаимодействия между живыми организмами и их окружением. Она охватывает широкий спектр тем, включая биоразнообразие, экосистемные услуги, охрану природы и влияние человека на окружающую среду. Понимание экологии имеет важное значение для сохранения природы и устойчивого развития.</p>
+        <p>Экология помогает нам понять, как функционируют экосистемы, как разные виды взаимодействуют друг с другом и с окружающей средой, а также как мы можем более ответственно использовать природные ресурсы.</p>
+        <img src="https://avatars.mds.yandex.net/i?id=5541d23f98d1d19008fc594969b68c7e_l-5423330-images-thumbs&n=13" alt="Природа и экосистема">
+    </div>
+
+    <div id="biodiversity" class="content">
+        <h2>Биоразнообразие</h2>
+        <p>Биоразнообразие – это разнообразие живых организмов на планете. Оно включает разнообразие видов, генов и экосистем. Сохранение биоразнообразия имеет критическое значение для устойчивости экосистем и обеспечения жизненно важных ресурсов для будущих поколений.</p>
+        <p>В последние десятилетия наблюдается значительное сокращение биоразнообразия из-за человеческой деятельности, включая вырубку лесов, загрязнение и изменение климата. Защита биоразнообразия требует комплексного подхода, включая сохранение природных habitats и устойчивое использование ресурсов.</p>
+        <img src="https://media.istockphoto.com/id/1300080105/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%B4%D0%B8%D0%BA%D0%B8%D0%B5-%D1%86%D0%B2%D0%B5%D1%82%D1%8B-%D0%BD%D0%B0-%D1%81%D0%B5%D0%BD%D0%BE%D0%BC-%D0%BB%D1%83%D0%B3%D1%83.jpg?s=612x612&w=0&k=20&c=eObrJBxxpp2xjbR_V0GyQO18sVIsD8iNK9lmif4hlZs=" alt="Биоразнообразие">
+    </div>
+
+    <div id="pollution" class="content">
+        <h2>Загрязнение</h2>
+        <p>Загрязнение окружающей среды – это введение вредных веществ в экосистемы, что может привести к серьезным последствиям для здоровья человека и природы. Важные виды загрязнения включают воздух, воду, почву и шум.</p>
+        <p>Загрязнение воздуха, например, связано с выбросами от автомобилей и промышленных предприятий и может привести к респираторным заболеваниям. Защита окружающей среды требует активных действий со стороны общества для снижения загрязнения и перехода на более чистые технологии.</p>
+        <img src="https://avatars.mds.yandex.net/i?id=64b91ff789470c574cd26b0e0e69672d_l-5289481-images-thumbs&ref=rim&n=13&w=1920&h=1212" alt="Загрязнение">
+    </div>
+
+    <div id="climate" class="content">
+        <h2>Изменение климата</h2>
+        <p>Изменение климата – это долгосрочные изменения температурных и атмосферных условий на Земле. Основными факторами изменения климата являются выбросы парниковых газов, вырубка лесов и другие человеческие действия.</p>
+        <p>Изменение климата приводит к экстремальным погодным условиям, повышению уровня моря и угрозе для биоразнообразия. Важно предпринимать меры для снижения влияния на климат, включая переход на возобновляемые источники энергии и повышение энергоэффективности.</p>
+        <img src="https://avatars.mds.yandex.net/i?id=3e000ad7c79c355cda93be3dcf833cdd_l-5282186-images-thumbs&n=13" alt="Изменение климата">
+    </div>
+
+    <div id="conservation" class="content">
+        <h2>Защита окружающей среды</h2>
+        <p>Защита окружающей среды включает в себя усилия по сохранению природных ресурсов и экосистем. Это может включать создание заповедников, восстановление экосистем, борьбу с загрязнением и устойчивое использование природных ресурсов.</p>
+        <p>Каждый из нас может внести свой вклад в защиту планеты, начиная с небольших изменений в повседневной жизни, таких как сокращение потребления пластика, участие в местных инициативах по озеленению и поддержка экологически чистых технологий.</p>
+        <img src="https://img.freepik.com/premium-vector/earth-hour-hands-holding-globe-with-plants-trees-background-vector-illustration_432516-4208.jpg?ga=GA1.1.1695913869.1728211315&semt=ais_hybrid" alt="Защита окружающей среды">
+    </div>
+
+    <script>
+        let isTransitioning = false;
+
+        function showPage(pageId) {
+            if (isTransitioning) return;
+            isTransitioning = true;
+
+            const currentPage = document.querySelector('.content.active');
+            const nextPage = document.getElementById(pageId);
+
+            if (currentPage !== nextPage) {
+                currentPage.classList.add('fade-out');
+
+                setTimeout(() => {
+                    currentPage.classList.remove('active', 'fade-out');
+                    nextPage.classList.add('fade-in');
+
+                    setTimeout(() => {
+                        nextPage.classList.add('active');
+                        nextPage.classList.remove('fade-in');
+                        isTransitioning = false; // Сбрасываем флаг после завершения перехода
+                    }, 500); // Время совпадает с временем анимации
+                }, 500); // Время совпадает с временем анимации исчезновения
+            } else {
+                isTransitioning = false; // Сбрасываем флаг, если нажали на уже активную страницу
+            }
+        }
+    </script>
+</body>
+</html>
